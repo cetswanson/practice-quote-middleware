@@ -12,3 +12,5 @@ class QuotesApp
     Quote.new.response
   end
 end
+
+Rack::Server.start :app => QuotesApp
