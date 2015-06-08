@@ -3,6 +3,7 @@ require 'rack/server'
 
 class Quote
   def response
+    [200, {}, pick_random_line("rickygervais.txt")]
   end
 end
 
