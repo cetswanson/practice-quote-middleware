@@ -7,6 +7,10 @@ class Quote
     request = Rack::Request.new(env)
     case request.path
     when "/quote" then  Rack::Response.new(render("quote.html.erb"))
+    when "/update"
+      Rack::Response.new do |response|
+        response.redirect("/quote")
+      end
     else Rack::Response.new("Not Found", 404)
     end
   end
