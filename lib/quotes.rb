@@ -15,6 +15,11 @@ class Quote
     end
   end
 
+  def render(template)
+    path = File.expand_path("../views/#{template}", __FILE__)
+    ERB.new(File.read(path)).result(binding)
+  end
+
   private
 
   def pick_random_line(file_name)
