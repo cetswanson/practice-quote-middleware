@@ -20,8 +20,6 @@ class Quote
     ERB.new(File.read(path)).result(binding)
   end
 
-  private
-
   def pick_random_line(file_name)
     chosen_line = nil
     File.foreach("fixtures/" + file_name).each_with_index do |line, number|
