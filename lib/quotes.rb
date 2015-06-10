@@ -3,6 +3,10 @@ require 'rack/server'
 
 class Quote
 
+  def initialize
+    @app = Rack::Builder.new
+  end
+
   def call(env)
     [200, {"Content-Type" => "text/plain"}, [pick_random_line("rickygervais.txt")]]
   end
