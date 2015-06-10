@@ -7,4 +7,7 @@ class Quote
     @app = app
   end
 
+  def call(env)
+    [status, headers, response]
+  end
 end
