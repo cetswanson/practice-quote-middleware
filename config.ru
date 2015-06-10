@@ -1,4 +1,4 @@
-require "quotes"
+require "./lib/quotes"
 
 use Rack::Reloader, 0
 
