@@ -1,4 +1,4 @@
-require_relative "lib/quotes"
+require_relative "./lib/quotes"
 
 use Rack::Reloader, 0
 
