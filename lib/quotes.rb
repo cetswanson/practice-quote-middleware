@@ -12,7 +12,7 @@ class Quote
   end
 
   def response
-    [200, {"Content-Type" => "text/plain"}, pick_random_line("rickygervais.txt")]
+    [200, {"Content-Type" => "text/plain"}, [pick_random_line("rickygervais.txt")]]
   end
 
   def pick_random_line(file_name)
