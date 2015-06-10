@@ -1,0 +1,12 @@
+GEM
+  specs:
+    rack (1.6.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rack
+
+BUNDLED WITH
+   1.10.3
