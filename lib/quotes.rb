@@ -8,7 +8,11 @@ class Quote
   end
 
   def call(env)
-    [200, {"Content-Type" => "text/plain"}, [pick_random_line("rickygervais.txt")]]
+    case env["REQUEST_PATH"]
+    when "/quote"
+      [200, {"Content-Type" => "text/plain"}, [pick_random_line("rickygervais.txt")]]
+    else Rack::Response.new("Not Found", 404)
+    end
   end
 
   def pick_random_line(file_name)
